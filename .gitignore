@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+vendor/
+.venv/
+venv/
+
+# Build output
+dist/
+build/
+out/
+.next/
+*.o
+*.so
+*.dylib
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Runtime
+*.pid
+*.seed
+
+# Test & coverage
+coverage/
+.nyc_output/
+htmlcov/
+.pytest_cache/
+.vitest/
+
+# Misc
+tmp/
+temp/
+*.bak
