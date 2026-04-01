@@ -46,8 +46,9 @@ htmlcov/
 .pytest_cache/
 .vitest/
 
-# Claude Code worktrees
+# Claude Code
 .claude/worktrees/
+.claude/settings.local.json
 
 # Misc
 tmp/
