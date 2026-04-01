@@ -1,20 +1,31 @@
 schema: spec-driven
 
-# Project context (optional)
-# This is shown to AI when creating artifacts.
-# Add your tech stack, conventions, style guides, domain knowledge, etc.
-# Example:
-#   context: |
-#     Tech stack: TypeScript, React, Node.js
-#     We use conventional commits
-#     Domain: e-commerce platform
+context: |
+  语言：中文（简体）
+  所有产出物必须用简体中文撰写。
+  技术术语（API、ORM、E2E 等）和代码示例保留英文。
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always include a "Non-goals" section
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+  技术栈：TypeScript, Next.js (App Router, Server Components 优先), Tailwind CSS, shadcn/ui, Drizzle ORM, SQLite
+  包管理器：pnpm
+  测试：Vitest (单元/集成), Playwright (E2E)
+  代码规范：ESLint
+
+  项目：个人单词本应用，本地使用，无需认证
+  外部能力：Merriam-Webster 词典 API、AI 辅助学习、语音功能
+  核心领域概念：单词、释义、例句、学习进度、复习计划
+
+rules:
+  proposal:
+    - 明确每次变更的范围，避免范围蔓延
+  specs:
+    - 词汇相关的场景必须包含英文例句
+  design:
+    - 识别可复用的 UI 模式，抽象为通用组件
+    - 当现有组件无法满足需求时，设计中应标注需要重构的组件及原因
+    - 不要直接修改 shadcn/ui 组件源码，通过组合或包装来扩展功能
+    - 使用 service 层封装数据库操作和外部 API 调用，Server Components 不直接访问数据源
+    - 不引入认证或权限机制，所有数据仅限本地访问
+    - 数据库 schema 使用 Drizzle ORM 定义，表名使用 snake_case，字段名使用 camelCase
+  tasks:
+    - 每个任务不超过 2 小时
+    - 任务按依赖顺序排列，基础设施优先
