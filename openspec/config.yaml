@@ -7,7 +7,7 @@ context: |
 
   技术栈：TypeScript, Next.js (App Router, Server Components 优先), Tailwind CSS, shadcn/ui, Drizzle ORM, SQLite
   包管理器：pnpm
-  测试：Vitest (单元/集成), Playwright (E2E)
+  测试：Vitest (单元/集成), Cucumber.js + Playwright (E2E/验收)
   代码规范：ESLint
 
   项目：个人单词本应用，本地使用，无需认证
@@ -19,6 +19,7 @@ rules:
     - 明确每次变更的范围，避免范围蔓延
   specs:
     - 词汇相关的场景必须包含英文例句
+    - 在 spec.md 同目录下生成对应的 .feature 文件（Gherkin 格式），将 spec 中的场景转换为 Cucumber 验收用例
   design:
     - 识别可复用的 UI 模式，抽象为通用组件
     - 当现有组件无法满足需求时，设计中应标注需要重构的组件及原因
@@ -29,3 +30,4 @@ rules:
   tasks:
     - 每个任务不超过 2 小时
     - 任务按依赖顺序排列，基础设施优先
+    - 每个 capability 的任务须包含：编写 step definitions 并运行 Cucumber 验收测试通过
