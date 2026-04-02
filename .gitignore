@@ -39,6 +39,9 @@ logs/
 *.pid
 *.seed
 
+# Database
+*.db
+
 # Test & coverage
 coverage/
 .nyc_output/
