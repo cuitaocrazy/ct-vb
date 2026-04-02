@@ -30,4 +30,4 @@ rules:
   tasks:
     - 每个任务不超过 2 小时
     - 任务按依赖顺序排列，基础设施优先
-    - 每个 capability 的任务须包含：编写 step definitions 并运行 Cucumber 验收测试通过
+    - 每个 capability 的任务须包含：先运行 Cucumber 获取生成的 step definition snippets，再基于 snippets 填充实现逻辑，最终运行验收测试通过
