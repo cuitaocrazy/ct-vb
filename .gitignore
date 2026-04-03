@@ -12,11 +12,14 @@ out/
 *.o
 *.so
 *.dylib
+*.tsbuildinfo
+next-env.d.ts
 
 # Environment & secrets
 .env
 .env.*
 !.env.example
+.vercel
 *.pem
 *.key
 
