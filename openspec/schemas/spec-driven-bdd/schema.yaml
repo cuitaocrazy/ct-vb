@@ -160,6 +160,10 @@ artifacts:
       - Use Background for shared preconditions
 
       - Keep scenarios independent and self-contained
+
+      - ALL punctuation in .feature files MUST be ASCII characters only.
+        No full-width or non-ASCII punctuation from any language (e.g. ，。；：""''（）、…).
+        This is critical for Cucumber step matching — non-ASCII punctuation causes silent matching failures.
     requires:
       - specs
   - id: design

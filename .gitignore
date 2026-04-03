@@ -58,6 +58,12 @@ playwright-report/
 # Playwright MCP
 .playwright-mcp/
 
+# Database
+data/
+
+# Drizzle
+drizzle/
+
 # Misc
 tmp/
 temp/
