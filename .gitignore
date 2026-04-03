@@ -45,10 +45,15 @@ coverage/
 htmlcov/
 .pytest_cache/
 .vitest/
+test-results/
+playwright-report/
 
 # Claude Code
 .claude/worktrees/
 .claude/settings.local.json
+
+# Playwright MCP
+.playwright-mcp/
 
 # Misc
 tmp/
